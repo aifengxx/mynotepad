@@ -1,0 +1,3 @@
+This version finish:
+1.UI design
+2.Create two slots:newFileSlot() and openFileSlot()
