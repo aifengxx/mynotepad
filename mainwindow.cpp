@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->setWindowTitle("Untitiled_aifengxx.txt");
     QObject::connect(ui->newAction,SIGNAL(triggered()),this,SLOT(newFileSlot()));
     QObject::connect(ui->openAction,SIGNAL(triggered()),this,SLOT(openFlieSlot()));
-    QObject::connect(ui->saveAction,SIGNAL(triggered()),this,SLOT(saveFileSlot()));
+    QObject::connect(ui->saveAsAction,SIGNAL(triggered()),this,SLOT(saveAsFileSlot()));
 }
 
 MainWindow::~MainWindow()
@@ -38,7 +38,7 @@ void MainWindow::openFlieSlot()
     //这个函数有三个参数：this，“Open File”和QDir。目的是在程序运行目录下的路径下打开
     qDebug()<<"open file"<<fileName;
 }
-void MainWindow::saveFileSlot()
+void MainWindow::saveAsFileSlot()
 {
     if(ui->textEdit->document()->isModified())
     {

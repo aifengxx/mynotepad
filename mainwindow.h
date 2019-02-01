@@ -25,7 +25,7 @@ private:
 private slots:
     void newFileSlot();//新建一个槽，这个槽用于新建这个按钮的功能实现。
     void openFlieSlot();//这个槽目的是打开一个文件，打开一个文件都要用槽。然后接下来到.cpp文件完成这个槽
-    void saveFileSlot();//保存文件的槽
+    void saveAsFileSlot();//保存文件的槽
 };
 
 #endif // MAINWINDOW_H
