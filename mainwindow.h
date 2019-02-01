@@ -1,5 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+#include <QApplication>
 #include <QMessageBox>//点击新建以后要跳出一个对话框，所以要使用QMessageBox。
 #include <QMainWindow>
 #include <QtDebug>//我们需要打印出一些消息看看我们的程序对不对
@@ -22,10 +23,14 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QString saveFileName;//这里定义一个全局私有的文件名
 private slots:
     void newFileSlot();//新建一个槽，这个槽用于新建这个按钮的功能实现。
     void openFlieSlot();//这个槽目的是打开一个文件，打开一个文件都要用槽。然后接下来到.cpp文件完成这个槽
-    void saveAsFileSlot();//保存文件的槽
+    void saveAsFileSlot();//另存为文件的槽
+    void saveFileSlot();
+  //  void exitSlot();
+
 };
 
 #endif // MAINWINDOW_H
